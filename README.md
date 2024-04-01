@@ -36,15 +36,24 @@ Alteração da resolução de módulo para node em tsconfig.json
 
   ### [id]
 
-![image](https://github.com/lucasmargui/React_Estrutura_CRUD/assets/157809964/caabb467-8bae-496c-ae8a-e8aef01f9cfb)
 ```
 <Form invoice={invoice} customers={customers} />
 ```
 Renderização do componente de formulário passando invoice nas props pois se trata de uma edição
 
+![image](https://github.com/lucasmargui/React_Estrutura_CRUD/assets/157809964/caabb467-8bae-496c-ae8a-e8aef01f9cfb)
 
 
- 
+
+
+![image](https://github.com/lucasmargui/React_Estrutura_CRUD/assets/157809964/c6c7c275-d949-4637-bc10-94afd1eebae1)
+
+- [state, dispatch]: Isso é uma desestruturação de um array. Aqui estamos extraindo esses elementos em variáveis chamadas state e dispatch.
+ - useFormState(updateInvoiceWithId, initialState): função que retorna um array com dois elementos. A função useFormState é uma função personalizada que cuida do estado de um formulário no React. Retorna um array com dois elementos: o estado atual do formulário e uma função para atualizar esse estado. updateInvoiceWithId é um updateInvoice com id bindado na função
+ - FormSchema: Aqui está sendo definido um esquema de validação para os dados do formulário. Está sendo utilizado o Zod, que é uma biblioteca de validação de esquema em TypeScript. O FormSchema é um objeto que define os campos necessários para criar uma fatura.
+ - CreateInvoice: Este é um novo esquema criado a partir do FormSchema, onde se omite o campo id e date, porque eles são gerados automaticamente no momento da criação da fatura.
+ - State: Aqui está sendo definido um tipo de estado que pode ter errors (erros de validação) e uma message opcional.
+ - updateInvoice: Esta é uma função assíncrona que recebe o id, estado anterior (prevState), os dados do formulário (formData). A função faz a validação dos dados do formulário usando o método safeParse do Zod. Se a validação falhar, ela retorna os erros de validação. Caso contrário, os dados são preparados para inserção no banco de dados. No entanto, a inserção real no banco de dados está comentada, então a função apenas simula a inserção, exibindo os dados no console. Se houver algum erro durante a inserção simulada, uma mensagem de erro específica do banco de dados é retornada. Após o processo de inserção (simulado), a função executa revalidatePath e redirect, que são funções que atualizam o cache da página de faturas e redirecionam o usuário para a página de faturas, respectivamente.
 
   
   ### create
@@ -58,7 +67,7 @@ Renderização do componente de formulário omitindo invoice nas props pois se t
 ![image](https://github.com/lucasmargui/React_Estrutura_CRUD/assets/157809964/46efbd05-4f72-4585-89b5-9d2a71729f7b)
 
  - [state, dispatch]: Isso é uma desestruturação de um array. Aqui estamos extraindo esses elementos em variáveis chamadas state e dispatch.
- - useFormState(createInvoice, initialState): função que retorna um array com dois elementos. A função useFormState é uma função personalizada que cuida do estado de um formulário no React. Presumivelmente, ela retorna um array com dois elementos: o estado atual do formulário e uma função para atualizar esse estado.
+ - useFormState(createInvoice, initialState): função que retorna um array com dois elementos. A função useFormState é uma função personalizada que cuida do estado de um formulário no React. Retorna um array com dois elementos: o estado atual do formulário e uma função para atualizar esse estado.
  - FormSchema: Aqui está sendo definido um esquema de validação para os dados do formulário. Está sendo utilizado o Zod, que é uma biblioteca de validação de esquema em TypeScript. O FormSchema é um objeto que define os campos necessários para criar uma fatura.
  - CreateInvoice: Este é um novo esquema criado a partir do FormSchema, onde se omite o campo id e date, porque eles são gerados automaticamente no momento da criação da fatura.
  - State: Aqui está sendo definido um tipo de estado que pode ter errors (erros de validação) e uma message opcional.

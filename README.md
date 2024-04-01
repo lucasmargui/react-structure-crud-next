@@ -36,6 +36,10 @@ Alteração da resolução de módulo para node em tsconfig.json
 
   ### [id]
   ### create
+
+  ![image](https://github.com/lucasmargui/React_Estrutura_CRUD/assets/157809964/ec63729a-f422-43c9-9923-3ebdf55407f2)
+
+  
   ### page.tsx
   
 ```

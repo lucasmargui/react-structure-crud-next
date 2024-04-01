@@ -130,15 +130,6 @@ Renderização do componente de formulário omitindo invoice nas props pois se t
  - State: Aqui está sendo definido um tipo de estado que pode ter errors (erros de validação) e uma message opcional.
  - createInvoice: Esta é uma função assíncrona que recebe o estado anterior (prevState) e os dados do formulário (formData). A função faz a validação dos dados do formulário usando o método safeParse do Zod. Se a validação falhar, ela retorna os erros de validação. Caso contrário, os dados são preparados para inserção no banco de dados. No entanto, a inserção real no banco de dados está comentada, então a função apenas simula a inserção, exibindo os dados no console. Se houver algum erro durante a inserção simulada, uma mensagem de erro específica do banco de dados é retornada. Após o processo de inserção (simulado), a função executa revalidatePath e redirect, que são funções que atualizam o cache da página de faturas e redirecionam o usuário para a página de faturas, respectivamente.
    
-
-
-
-
-  
-  
-
-
-   
 ## lib
   Diretório onde você pode armazenar funções utilitárias, hooks customizados, lógica de negócios compartilhada ou qualquer outra coisa que não se encaixe  diretamente nas páginas ou componentes da sua aplicação.
 
@@ -154,5 +145,25 @@ Renderização do componente de formulário omitindo invoice nas props pois se t
 
 ## page.tsx
 Este é um arquivo que representa uma página específica da sua aplicação sendo a página inicial (index.tsx), e tem como caminho https://localhost:3000
+
+
+# Resultado
+
+  <div align="center">
+   <h2>Read/Delete</h2>
+   <img src="https://github.com/lucasmargui/React_Estrutura_CRUD/assets/157809964/6de0b53d-8888-48f7-b991-6d63c37863e4" style="width:100%">
+   <h2>Create</h2>
+   <img src="https://github.com/lucasmargui/React_Estrutura_CRUD/assets/157809964/367ca950-55f8-428c-9fdd-7cadb7bedd05" style="width:100%">
+   <h2>Update</h2>
+   <img src="https://github.com/lucasmargui/React_Estrutura_CRUD/assets/157809964/5a9f97ed-45e3-46c5-8483-50f5a9d2cfc0" style="width:100%">
+ </div>
+
+
+ 
+
+
+
+
+
 
 
